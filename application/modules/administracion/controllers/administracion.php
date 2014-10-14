@@ -13,7 +13,7 @@ class Administracion extends CI_Controller
 
 	function index()
 	{
-			echo "Hola Mundo";
+			echo "Hola Mundo ya con cambios en github";
 		
 	}
 	function usuarios()
