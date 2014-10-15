@@ -24,9 +24,8 @@ class Administracion extends CI_Controller
 			$data['nombre_usuario']	= $this->tank_auth->get_username();
 			$data['tabla_usuarios'] = $this->Mod_administracion->get_usuarios();
 
-			print_r($data['tabla_usuarios']);
 			// renderizo la vista index.php (modules/administracion/views/index.php)
-			//$this->load->view('index', $data);
+			$this->load->view('index', $data);
 			}
 	}
 }

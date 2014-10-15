@@ -11,6 +11,13 @@ class Mod_administracion extends CI_Model
 	function get_usuarios()
 	{
 		$query = $this->db->get('users');
+		if ($query->num_rows() > 0){ return $query->result_array(); }
+		else { return FALSE; }
+	}
+	function get_usuario($id)
+	{
+		$query = $this->db->where('id',$id);
+		$query = $this->db->get('users');
 		if ($query->num_rows() > 0){ return $query->row(); }
 		else { return FALSE; }
 	}
